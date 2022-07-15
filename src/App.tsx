@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
+
 import "./App.css";
 
 interface IInvoiceListProps {
@@ -44,7 +44,7 @@ const InvoiceList = (props: IInvoiceListProps) => {
   );
 };
 
-function App() {
+export default function App() {
   const data: InvoiceDataType = {
     customerName: "Google",
     invoices: [
@@ -70,4 +70,3 @@ function App() {
   );
 }
 
-export default App;
