@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./App.css";
 
 interface IInvoiceListProps {
@@ -27,12 +26,16 @@ const InvoiceList = (props: IInvoiceListProps) => {
     justifyContent: "space-between",
   };
   return (
-    <div className="App">
-      <h1>{customerName}</h1>
+    <div className="m-3">
+      <h1 className="text-3xl bg-red-300 rounded-lg">{customerName}</h1>
       <hr />
       <div>
         {invoices.map((invoice) => (
-          <div key={invoice.id} style={itemStyleContainer}>
+          <div
+            key={invoice.id}
+            style={itemStyleContainer}
+            className="my-1 rounded-lg bg-purple-50"
+          >
             <div>{invoice.name}</div>
             <div>
               {invoice.total} - {invoice.paymentStatus}
@@ -69,4 +72,3 @@ export default function App() {
     </div>
   );
 }
-
